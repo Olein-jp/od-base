@@ -1,8 +1,8 @@
 <?php
 /*
- * project   :OD Base
+ * project   : OD Base
  * file name : functions.php
- * created   :2017/06/13
+ * created   : 2017/06/13
  */
 
 if ( ! function_exists( 'odbase_setup' ) ) :

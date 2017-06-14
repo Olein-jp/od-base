@@ -251,6 +251,7 @@ body {
 .site-content {
   width: 1060px;
   margin: 0 auto;
+  padding: 30px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,34 +266,43 @@ body {
   margin-right: 30px;
 }
 
-/*--------------------------------------------------------------
-# sidebar
---------------------------------------------------------------*/
-.sidebar {
-  width: 336px;
-}
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-  max-width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Content - Posts and pages
---------------------------------------------------------------*/
 .sticky {
-  display: block;
+  background: #f4f4f4;
+  border: 1px solid #eee;
+  padding: 15px;
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 50px;
+}
+
+.hentry .entry-title {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.hentry .entry-meta {
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hentry .entry-meta .date,
+.hentry .entry-meta .category,
+.hentry .entry-meta .category-links,
+.hentry .entry-meta .tag-links,
+.hentry .entry-meta .author {
+  margin-right: 10px;
+}
+
+.hentry .entry-thumbnail {
+  margin-bottom: 10px;
+}
+
+.hentry .entry-excerpt {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .byline,
@@ -314,6 +324,25 @@ body {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# sidebar
+--------------------------------------------------------------*/
+.sidebar {
+  width: 336px;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
