@@ -1,56 +1,84 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package od_base
+/*
+ * project   :OD Base
+ * file name :index.php
+ * created   :2017/06/13
  */
+?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
 
-get_header(); ?>
+<?php wp_head(); ?>
+</head>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+<body <?php body_class(); ?>>
+<div id="page" class="site">
+<header class="site-header">
+	<div class="site-header__branding">
+		<?php if ( is_home() || is_front_page() ): ?>
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php else: ?>
+		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		<?php endif; ?>
+		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	</div>
+	<nav class="site-header__gnavi">
 		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+			wp_nav_menu( array(
+				'theme_location' => 'global',
+				'menu_class' => 'gnavi',
+				'depth' => 1,
+			) );
+		?>
+	</nav>
+	<figure class="custom-header-image">
+		<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+	</figure>
+</header>
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
+		<?php
+			// カテゴリー名をリンクなしで取得したい場合
+			$cat = get_the_category();
+			$cat = $cat[0];
+		?>
+		<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
+			<h2 class="entry-title"><?php the_title(); ?></h2>
+			<div class="entry-meta">
+				<span class="date"><?php the_time(); ?></span>
+				<span class="category"><?php if ( $cat ) { echo esc_html( $cat->name ); } // カテゴリー名（リンクなし）を表示 ?></span>
+				<span class="categori-links"><?php the_category( '、' ); ?></span>
+				<span class="tag-links"><?php the_tags( '| ', '、' ); ?></span>
+				<span class="author"><?php the_author(); ?></span>
+			</div>
+			<?php if ( has_post_thumbnail() ): ?>
+			<figure class="entry-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</figure>
+			<?php 
+				/* else:
+				 * サムネイルがない場合に挿入する画像を指定
+				 * その際にはfigureの位置を再考せよ
+				*/
+			?>
+			<?php endif; ?>
+			<div class="entry-excerpt">
+				<?php the_excerpt(); ?>
+			</div>
+		</article>
+		<?php endwhile; endif; ?>
+	</div>
+	<aside id="secondary" class="sidebar" role="complementary">
+		<?php if ( ! is_active_sidebar( 'sidebar' ) ){ return; } ?>
+		<?php dynamic_sidebar( 'sidebar' ); ?>
+	</aside>
+</div>
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>
