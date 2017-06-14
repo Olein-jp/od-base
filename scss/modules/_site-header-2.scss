@@ -1,0 +1,62 @@
+//======================================================================
+// import
+//======================================================================
+@import "owned/mixin";
+@import "owned/variables";
+
+//======================================================================
+// Setting
+//======================================================================
+@import "setting/settings";
+
+//======================================================================
+// header type 2
+//======================================================================
+.site-header {
+	position: relative;
+	&__branding {
+		position: absolute;
+		top: 0;
+		left: 10%;
+		padding: 30px 0;
+		width: 40%;
+	}
+	&__gnavi {
+		position: absolute;
+		top: 0;
+		right: 10%;
+		width: 40%;
+	}
+}
+.site-title {
+	font-size: 30px;
+	line-height: 1;
+	margin-bottom: .2em;
+	a {
+		@include link-color(white);
+		text-decoration: none;
+	}
+}
+.site-description {
+	color: white;
+	font-size: 14px;
+	line-height: 1;
+}
+.gnavi {
+	ul {
+		padding: 30px 0;
+		li {
+			display: inline-block;
+			font-size: 12px;
+			a {
+				display: block;
+				@include link-color(white);
+				padding: 8px;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.custom-header-image {
+	margin-bottom: 30px;
+}

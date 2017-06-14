@@ -1,0 +1,7 @@
+//======================================================================
+// Layout
+//======================================================================
+$page-width: 1060px;
+$sidebar-width: 336px;
+$bitween-sidebar-content-margin: 30px;
+$content-width: $page-width - ( $sidebar-width + $bitween-sidebar-content-margin );

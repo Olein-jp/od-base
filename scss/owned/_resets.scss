@@ -1,0 +1,29 @@
+/*
+ * Form Reset
+ */
+input, button, textarea, select {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*
+ * box-sizing
+ */
+* {
+	box-sizing: border-box;
+}
+
+/*
+ * responsive images
+ */
+img {
+	max-width: 100%;
+	height: auto;
+}
