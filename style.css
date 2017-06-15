@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: OD base
 Theme URI: 
@@ -93,6 +94,40 @@ input, button, textarea, select {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/*
+ * Accessibility 
+ */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 
 /*--------------------------------------------------------------
@@ -305,27 +340,6 @@ body {
   line-height: 1.5;
 }
 
-.byline,
-.updated:not(.published) {
-  display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-  display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
 /*--------------------------------------------------------------
 # sidebar
 --------------------------------------------------------------*/
@@ -333,11 +347,77 @@ body {
   width: 336px;
 }
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 2em;
+}
+
+.widget-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+.widget ul {
+  font-size: 14px;
+}
+
+.widget ul li {
+  line-height: 2;
+}
+
+.widget ul li ul {
+  padding-left: 1em;
+  margin-bottom: .5em;
+}
+
+.widget select {
+  position: relative;
+  width: 100%;
+  border: 1px solid #eee;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.widget_calendar table {
+  width: 100%;
+}
+
+.widget_calendar table caption {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  background: #f4f4f4;
+}
+
+.widget_calendar table thead tr th {
+  padding: 10px;
+}
+
+.widget_calendar table thead tr th[title="土曜日"], .widget_calendar table thead tr th[title="saturday"] {
+  color: #53b6f3;
+}
+
+.widget_calendar table thead tr th[title="日曜日"], .widget_calendar table thead tr th[title="sunday"] {
+  color: #f94c86;
+}
+
+.widget_calendar table tbody tr td {
+  padding: 10px;
+  text-align: center;
+}
+
+.widget_calendar table tfoot #prev a,
+.widget_calendar table tfoot #next a {
+  display: inline-block;
+  background: #f4f4f4;
+  padding: 10px;
+  color: #333333;
+}
+
+.widget_calendar table tfoot #next {
+  text-align: right;
 }
 
 /* Make sure select elements fit in widgets. */

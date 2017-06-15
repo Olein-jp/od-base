@@ -149,27 +149,6 @@ body {
 	}
 }
 
-.byline,
-.updated:not(.published) {
-	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
 /*--------------------------------------------------------------
 # sidebar
 --------------------------------------------------------------*/
@@ -177,11 +156,81 @@ body {
 	width: $sidebar-width;
 }
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 2em;
+	&-title {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: .5em;
+	}
+	ul {
+		font-size: 14px;
+		li {
+			line-height: 2;
+			ul {
+				padding-left: 1em;
+				margin-bottom: .5em;
+			}
+		}
+	}
+	select {
+		position: relative;
+		width: 100%;
+		border: 1px solid #eee;
+		background: #f4f4f4;
+		padding: 10px;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+}
+
+.widget_calendar {
+	table {
+		width: 100%;
+		caption {
+			font-size: 14px;
+			font-weight: bold;
+			padding: 10px;
+			background: #f4f4f4;
+		}
+		thead {
+			tr {
+				th {
+					padding: 10px;
+					&[title="土曜日"],
+					&[title="saturday"] {
+						color: #53b6f3;
+					}
+					&[title="日曜日"],
+					&[title="sunday"] {
+						color: #f94c86;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					padding: 10px;
+					text-align: center;
+				}
+			}
+		}
+		tfoot {
+			#prev,
+			#next {
+				a {
+					display: inline-block;
+					background: #f4f4f4;
+					padding: 10px;
+					color: $text-color;
+				}
+			}
+			#next {
+				text-align: right;
+			}
+		}
+	}
 }
 
 /* Make sure select elements fit in widgets. */

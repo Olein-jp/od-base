@@ -53,11 +53,11 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2>
 			<div class="entry-meta">
-				<span class="date">投稿日:<?php the_time( get_option( 'date_format' ) ); ?></span>
-				<span class="category">カテゴリー:<?php if ( $cat ) { echo esc_html( $cat->name ); } // カテゴリー名（リンクなし）を表示 ?></span>
-				<span class="categori-links">カテゴリー:<?php the_category( '、' ); ?></span>
-				<span class="tag-links">タグ:<?php the_tags( '', '、' ); ?></span>
-				<span class="author">投稿者:<?php the_author(); ?></span>
+				<span class="date">投稿日 : <?php the_time( get_option( 'date_format' ) ); ?></span>
+				<span class="category">カテゴリー : <?php if ( $cat ) { echo esc_html( $cat->name ); } // カテゴリー名（リンクなし）を表示 ?></span>
+				<span class="categori-links">カテゴリー : <?php the_category( '、' ); ?></span>
+				<span class="tag-links">タグ : <?php the_tags( '', '、' ); ?></span>
+				<span class="author">投稿者 : <?php the_author(); ?></span>
 			</div>
 			<?php if ( has_post_thumbnail() ): ?>
 			<figure class="entry-thumbnail">
