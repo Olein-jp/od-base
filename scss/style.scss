@@ -183,6 +183,7 @@ body {
 	}
 }
 
+/* カレンダーウィジェット */
 .widget_calendar {
 	table {
 		width: 100%;
@@ -232,6 +233,7 @@ body {
 	}
 }
 
+/* 最近のコメントウィジェット */
 .widget_recent_comments {
 	ul {
 		li {
@@ -246,6 +248,7 @@ body {
 	}
 }
 
+/* RSSウィジェット */
 .widget_rss {
 	ul {
 		li {
@@ -269,6 +272,7 @@ body {
 	}
 }
 
+/* 検索ウィジェット */
 .widget_search {
 	.search-field {
 		width: 80%;
@@ -287,10 +291,12 @@ body {
 	}
 }
 
+/* テキストウィジェット */
 .widget_text {
 	// 独自のスタイルを記述するか、投稿コンテンツのスタイルをそのまま利用してもよい
 }
 
+/* タグウィジェット */
 .widget_tag_cloud {
 	.tagcloud {
 		a {
@@ -307,10 +313,29 @@ body {
 	}
 }
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
+/*--------------------------------------------------------------
+# site footer
+--------------------------------------------------------------*/
+.site-footer {
+	&__inner {
+		width: $page-width;
+		margin: 0 auto;
+	}
+	.copyright {
+		background: $text-color;
+		padding: 8px 0;
+		p {
+			text-align: center;
+			font-size: 12px;
+			line-height: 1;
+			color: white;
+			a {
+				color: white;
+			}
+		}
+	}
 }
+
 
 /*--------------------------------------------------------------
 # Content - Comments

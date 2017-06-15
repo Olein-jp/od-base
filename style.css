@@ -379,6 +379,7 @@ body {
   font-size: 14px;
 }
 
+/* カレンダーウィジェット */
 .widget_calendar table {
   width: 100%;
 }
@@ -419,6 +420,7 @@ body {
   text-align: right;
 }
 
+/* 最近のコメントウィジェット */
 .widget_recent_comments ul li {
   font-size: 12px;
 }
@@ -427,6 +429,7 @@ body {
   font-size: 14px;
 }
 
+/* RSSウィジェット */
 .widget_rss ul li {
   margin-bottom: .5em;
 }
@@ -446,6 +449,7 @@ body {
   font-size: 12px;
 }
 
+/* 検索ウィジェット */
 .widget_search .search-field {
   width: 80%;
   border: 1px solid #eee;
@@ -463,6 +467,8 @@ body {
   border-radius: 5px;
 }
 
+/* テキストウィジェット */
+/* タグウィジェット */
 .widget_tag_cloud .tagcloud a {
   display: inline-block;
   border: 1px solid #eee;
@@ -475,9 +481,28 @@ body {
   margin-bottom: 10px;
 }
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-  max-width: 100%;
+/*--------------------------------------------------------------
+# site footer
+--------------------------------------------------------------*/
+.site-footer__inner {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.site-footer .copyright {
+  background: #333333;
+  padding: 8px 0;
+}
+
+.site-footer .copyright p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
+  color: white;
+}
+
+.site-footer .copyright p a {
+  color: white;
 }
 
 /*--------------------------------------------------------------
