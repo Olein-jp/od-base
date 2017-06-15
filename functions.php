@@ -102,4 +102,13 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 
+/*
+ * read more ボタンをexcerpt出力の後に設置
+ */
+function new_excerpt_more( $more ) {
+	return '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">もっと読む</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
 ?>
