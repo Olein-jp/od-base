@@ -87,7 +87,7 @@ add_action( 'widgets_init', 'odbase_widgets_init' );
  * スクリプトを読み込み
  */
 function odbase_scripts() {
-	wp_enqueue_style( 'lab-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'odbase-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'odbase_scripts' );
 
