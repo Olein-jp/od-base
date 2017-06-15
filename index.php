@@ -26,6 +26,11 @@
 		<?php endif; ?>
 		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 	</div>
+	<?php if ( get_header_image() ): ?>
+	<figure class="custom-header-image">
+		<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+	</figure>
+	<?php endif; ?>
 	<nav class="site-header__gnavi">
 		<?php
 			wp_nav_menu( array(
@@ -35,9 +40,6 @@
 			) );
 		?>
 	</nav>
-	<figure class="custom-header-image">
-		<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-	</figure>
 </header>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
