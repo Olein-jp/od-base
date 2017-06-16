@@ -5,43 +5,7 @@
  * created   :2017/06/13
  */
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-
-<?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-<header class="site-header">
-	<div class="site-header__branding">
-		<?php if ( is_home() || is_front_page() ): ?>
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php else: ?>
-		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php endif; ?>
-		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-	</div>
-	<?php if ( get_header_image() ): ?>
-	<figure class="custom-header-image">
-		<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-	</figure>
-	<?php endif; ?>
-	<nav class="site-header__gnavi">
-		<?php
-			wp_nav_menu( array(
-				'theme_location' => 'global',
-				'menu_class' => 'gnavi',
-				'depth' => 1,
-			) );
-		?>
-	</nav>
-</header>
-<div id="content" class="site-content">
+<?php get_header(); ?>
 	<div id="primary" class="content-area">
 		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
 		<?php
@@ -78,20 +42,5 @@
 		</article>
 		<?php endwhile; endif; ?>
 	</div>
-	<aside id="secondary" class="sidebar" role="complementary">
-		<?php if ( ! is_active_sidebar( 'sidebar' ) ){ return; } ?>
-		<?php dynamic_sidebar( 'sidebar' ); ?>
-	</aside>
-</div>
-<footer class="site-footer">
-	<div class="site-footer__inner">
-		
-	</div>
-	<div class="copyright">
-		<p>©Copyright <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'title' ); ?></a><?php if ( get_bloginfo( 'description' ) ): ?> | <?php bloginfo( 'description' ); endif; ?>. All Rights Reserved.</p>
-	</div>
-</footer>
-</div>
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
