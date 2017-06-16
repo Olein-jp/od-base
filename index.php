@@ -6,7 +6,7 @@
  */
 ?>
 <?php get_header(); ?>
-	<div id="primary" class="content-area">
+	<main id="primary" class="content-area">
 		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
 		<?php
 			// カテゴリー名をリンクなしで取得したい場合
@@ -41,6 +41,6 @@
 			</div>
 		</article>
 		<?php endwhile; endif; ?>
-	</div>
+	</main>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
