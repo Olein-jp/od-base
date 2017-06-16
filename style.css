@@ -305,9 +305,10 @@ img {
 }
 
 /*--------------------------------------------------------------
-# posts navigation
+# posts navigation & post navigation
 --------------------------------------------------------------*/
-.posts-navigation .nav-links {
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -315,18 +316,23 @@ img {
 }
 
 .posts-navigation .nav-previous,
-.posts-navigation .nav-next {
+.posts-navigation .nav-next,
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
   width: 50%;
 }
 
 .posts-navigation .nav-previous a,
-.posts-navigation .nav-next a {
+.posts-navigation .nav-next a,
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
   display: inline-block;
   padding: 15px;
   background: #f4f4f4;
 }
 
-.posts-navigation .nav-next {
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
   text-align: right;
 }
 

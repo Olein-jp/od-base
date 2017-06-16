@@ -40,7 +40,13 @@
 				<?php the_content(); ?>
 			</div>
 		</article>
-		<?php endwhile; endif; ?>
+		<?php
+			endwhile;
+		
+			the_post_navigation();	
+			
+			endif;
+		?>
 	</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
