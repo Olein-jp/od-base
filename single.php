@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 	<main id="primary" class="content-area">
-		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
+		<?php while ( have_posts() ): the_post(); ?>
 		<?php
 			// カテゴリー名をリンクなしで取得したい場合
 			$cat = get_the_category();
@@ -43,9 +43,7 @@
 		<?php
 			endwhile;
 		
-			the_post_navigation();	
-			
-			endif;
+			the_post_navigation();
 		?>
 	</main>
 <?php get_sidebar(); ?>
