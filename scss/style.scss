@@ -114,6 +114,9 @@ Tags:
 	margin: 0 auto;
 	padding: 30px 0;
 	display: flex;
+	// サイドバーを左にしたい場合には下のコードをコメントアウト
+	// flex-direction: row-reverse;	
+	// .content-areaのマージンを右から左に変更 line.127
 }
 
 /*--------------------------------------------------------------
