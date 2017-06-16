@@ -40,7 +40,17 @@
 				<?php the_excerpt(); ?>
 			</div>
 		</article>
-		<?php endwhile; endif; ?>
+		<?php
+			endwhile;
+			
+			/*
+			 * デフォルトのページ送りを出力
+			 * wp-pagenaviなどページネーションプラグインを利用する場合には削除もしくは分岐
+			 */
+			the_posts_navigation();
+			
+			endif;
+		?>
 	</main>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

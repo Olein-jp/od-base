@@ -164,6 +164,27 @@ Tags:
 }
 
 /*--------------------------------------------------------------
+# posts navigation
+--------------------------------------------------------------*/
+.posts-navigation {
+	.nav-links {
+		display: flex;
+	}
+	.nav-previous,
+	.nav-next {
+		width: 50%;
+		a {
+			display: inline-block;
+			padding: 15px;
+			background: #f4f4f4;
+		}
+	}
+	.nav-next {
+		text-align: right;
+	}
+}
+
+/*--------------------------------------------------------------
 # sidebar
 --------------------------------------------------------------*/
 .sidebar {

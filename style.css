@@ -305,6 +305,32 @@ img {
 }
 
 /*--------------------------------------------------------------
+# posts navigation
+--------------------------------------------------------------*/
+.posts-navigation .nav-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.posts-navigation .nav-previous,
+.posts-navigation .nav-next {
+  width: 50%;
+}
+
+.posts-navigation .nav-previous a,
+.posts-navigation .nav-next a {
+  display: inline-block;
+  padding: 15px;
+  background: #f4f4f4;
+}
+
+.posts-navigation .nav-next {
+  text-align: right;
+}
+
+/*--------------------------------------------------------------
 # sidebar
 --------------------------------------------------------------*/
 .sidebar {
