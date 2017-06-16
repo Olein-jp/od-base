@@ -28,4 +28,9 @@ WordPressのテーマを趣味・クライアントワークを問わず作る�
 * カスタムメニュー（global navi)
 
 ## 最新のスクリーンショット
-![最新のスクリーンショット](https://github.com/KojiKuno/od-base/blob/master/screenshot/odbase.png)
+### ブログトップページ
+![最新のスクリーンショット](https://github.com/KojiKuno/od-base/blob/master/screenshot/index.png)
+
+### 記事ページ
+![最新のスクリーンショット](https://github.com/KojiKuno/od-base/blob/master/screenshot/single.png)
+
