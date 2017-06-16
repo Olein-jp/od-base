@@ -12,7 +12,7 @@
 			// カテゴリー名をリンクなしで取得したい場合
 			$cat = get_the_category();
 			$cat = $cat[0];
-			// 出力はline.55
+			// 出力はline.23
 		?>
 		<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 			<h2 class="entry-title">
