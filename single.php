@@ -16,9 +16,7 @@
 		?>
 		<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<h1 class="entry-title">
-					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h1>
+				<h1 class="entry-title"><?php the_title(); ?></a></h1>
 				<div class="entry-meta">
 					<span class="date">投稿日 : <?php the_time( get_option( 'date_format' ) ); ?></span>
 					<span class="category">カテゴリー : <?php if ( $cat ) { echo esc_html( $cat->name ); } // カテゴリー名（リンクなし）を表示 ?></span>

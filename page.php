@@ -10,9 +10,7 @@
 		<?php while ( have_posts() ): the_post(); ?>
 		<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<h1 class="entry-title">
-					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h1>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<!--
 				#
 				# メタ情報は固定ページに掲載しないという場合もあるので
