@@ -1045,84 +1045,201 @@ img {
 }
 
 /*--------------------------------------------------------------
-# Content - Comments
+# Comments
 --------------------------------------------------------------*/
-.comment-content a {
+.comments-title {
+  text-align: center;
+  padding: 30px;
+  font-size: 26px;
+  color: #555;
+  border: 1px solid #eee;
+  margin-bottom: 1em;
+}
+
+.comment.parent .children {
+  padding-left: 1em;
+}
+
+.comment-meta .vcard {
+  margin-bottom: .5em;
+}
+
+.comment-meta .vcard .fn {
+  font-size: 16px;
+}
+
+.comment-metadata {
+  font-size: 12px;
+  margin-bottom: 1em;
+}
+
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+.comment-content h1 {
+  font-size: 28px;
+}
+
+.comment-content h2 {
+  font-size: 22px;
+}
+
+.comment-content h3 {
+  font-size: 18px;
+}
+
+.comment-content h4 {
+  font-size: 16px;
+}
+
+.comment-content h5 {
+  font-size: 14px;
+}
+
+.comment-content h6 {
+  font-size: 12px;
+}
+
+.comment-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+.comment-content blockquote {
+  background: #f4f4f4;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.comment-content blockquote p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.comment-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.comment-content table {
+  margin-bottom: 2em;
+}
+
+.comment-content table thead {
+  background: #f4f4f4;
+}
+
+.comment-content table thead tr th {
+  padding: 7px;
+}
+
+.comment-content table tbody tr th {
+  padding: 7px;
+}
+
+.comment-content table tbody tr td {
+  padding: 7px;
+}
+
+.comment-content dl {
+  margin-bottom: 2em;
+}
+
+.comment-content dl dt {
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.comment-content dl dd {
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+
+.comment-content ul {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.comment-content ul li {
+  line-height: 1.3;
+}
+
+.comment-content ul li ul {
+  margin-bottom: 10px;
+}
+
+.comment-content ol {
+  list-style: decimal;
+  padding-left: 30px;
+}
+
+.comment-content ol li {
+  line-height: 1.3;
+}
+
+.comment-content ol li ol {
+  margin-bottom: 10px;
+}
+
+.comment-content pre {
+  background: #f4f4f4;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
   word-wrap: break-word;
-}
-
-.bypostauthor {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
   max-width: 100%;
+  overflow: auto;
 }
 
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.comment-content div {
+  max-width: 700px;
 }
 
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+.comment-content img {
+  max-width: 700px;
 }
 
-.wp-caption-text {
+.comment-content .alignleft {
+  float: left;
+  margin-right: 10px;
+}
+
+.comment-content .alignright {
+  float: right;
+  margin-left: 10px;
+}
+
+.comment-content .aligncenter {
+  margin: 0 auto;
+}
+
+.comment-content .wp-caption-text {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .comment-content img,
+  .comment-content div {
+    max-width: 100%;
+  }
+}
+
+.no-comments {
+  margin: 2em -0px;
   text-align: center;
-}
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em;
-}
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-  max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-  max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-  max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
-}
-
-.gallery-caption {
-  display: block;
+  background: #f4f4f4;
+  padding: 30px;
+  border: 1px solid #eee;
 }
