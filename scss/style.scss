@@ -401,6 +401,35 @@ Tags:
 	color: lighten($text-color, 25%);
 }
 
+/*--------------------------------------------------------------
+# 404
+--------------------------------------------------------------*/
+.error-404 {
+	@include content-styling();
+	.search-form {
+		text-align: center;
+		.search-field {
+			border: 1px solid #f4f4f4;
+			border-radius: 5px;
+			padding: 15px;
+			font-size: 16px;
+			width: 60%;
+		}
+		.search-submit {
+			background: #eee;
+			height: 54px;
+			padding: 15px;
+			font-size: 16px;
+			border-radius: 5px;
+		}
+	}
+	ul {
+		li {
+			font-size: 14px;
+			margin-bottom: .5em;
+		}
+	}
+}
 
 
 /*--------------------------------------------------------------
