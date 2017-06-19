@@ -277,7 +277,7 @@ img {
 
 .hentry .entry-meta {
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-bottom: 10px;
 }
 
@@ -832,8 +832,27 @@ img {
 }
 
 /*--------------------------------------------------------------
-# single
+# page header
 --------------------------------------------------------------*/
+.page-header {
+  border: 1px solid #eee;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.archive-description {
+  padding-top: 15px;
+  font-size: 14px;
+  font-style: italic;
+  color: #737373;
+}
+
 /*--------------------------------------------------------------
 # Content - Comments
 --------------------------------------------------------------*/
