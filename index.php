@@ -5,7 +5,10 @@
  * created   :2017/06/13
  */
 ?>
-<?php get_header(); ?>
+<?php
+	// get_header();
+	get_header( 'topmenu' );
+?>
 	<main id="primary" class="content-area">
 		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
 		<?php
