@@ -893,6 +893,12 @@ img {
   padding: 8px 0;
 }
 
+@media screen and (max-width: 767px) {
+  .site-footer .copyright {
+    padding: 8px 3%;
+  }
+}
+
 .site-footer .copyright p {
   text-align: center;
   font-size: 12px;

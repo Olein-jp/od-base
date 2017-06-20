@@ -407,6 +407,9 @@ Tags:
 	.copyright {
 		background: $text-color;
 		padding: 8px 0;
+		@media screen and ( max-width:$mq-tb - 1px ){
+			padding: 8px 3%;
+		}
 		p {
 			text-align: center;
 			font-size: 12px;
