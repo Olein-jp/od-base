@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*
 Theme Name: OD base
-Theme URI: 
+Theme URI: demo.olein-design.com/od-base/
 Author: Koji Kuno
 Author URI: http://olein-design.com
-Description: Description
+Description: WordPressテーマ制作をスピーディーにスモールにスタートできる
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -138,29 +138,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
-}
-
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
-}
-
-.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*--------------------------------------------------------------
-# page
+# page.site
 --------------------------------------------------------------*/
 #page.site {
   position: relative;
@@ -213,7 +191,7 @@ img {
 
 .gnavi ul {
   text-align: center;
-  padding: 0 0 15px;
+  padding: 0;
 }
 
 .gnavi ul li {
@@ -242,10 +220,6 @@ img {
 
 .gnavi ul li a:hover, .gnavi ul li a:active {
   outline: 0;
-}
-
-.gnavi_topmenu ul {
-  padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -512,6 +486,28 @@ img {
   .hentry .entry-content div {
     max-width: 100%;
   }
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------

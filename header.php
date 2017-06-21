@@ -30,7 +30,7 @@
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'global',
-				'menu_class' => 'gnavi gnavi_topmenu',
+				'menu_class' => 'gnavi',
 				'depth' => 1,
 			) );
 		?>
