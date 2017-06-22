@@ -64,19 +64,17 @@ Tags:
 	line-height: 1;
 }
 
-.gnavi {
-	ul {
-		text-align: center;
-		padding: 0;
-		li {
-			display: inline-block;
-			font-size: 14px;
-			a {
-				display: block;
-				@include link-color($text-color);
-				padding: 15px;
-				text-decoration: none;
-			}
+ul.gnavi {
+	text-align: center;
+	padding: 0;
+	li {
+		display: inline-block;
+		font-size: 14px;
+		a {
+			display: block;
+			@include link-color($text-color);
+			padding: 15px;
+			text-decoration: none;
 		}
 	}
 }

@@ -189,36 +189,36 @@ img {
   line-height: 1;
 }
 
-.gnavi ul {
+ul.gnavi {
   text-align: center;
   padding: 0;
 }
 
-.gnavi ul li {
+ul.gnavi li {
   display: inline-block;
   font-size: 14px;
 }
 
-.gnavi ul li a {
+ul.gnavi li a {
   display: block;
   color: #333333;
   padding: 15px;
   text-decoration: none;
 }
 
-.gnavi ul li a:visited {
+ul.gnavi li a:visited {
   color: #0d0d0d;
 }
 
-.gnavi ul li a:hover, .gnavi ul li a:focus, .gnavi ul li a:active {
+ul.gnavi li a:hover, ul.gnavi li a:focus, ul.gnavi li a:active {
   color: #595959;
 }
 
-.gnavi ul li a:focus {
+ul.gnavi li a:focus {
   outline: thin dotted;
 }
 
-.gnavi ul li a:hover, .gnavi ul li a:active {
+ul.gnavi li a:hover, ul.gnavi li a:active {
   outline: 0;
 }
 
