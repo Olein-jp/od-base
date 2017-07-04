@@ -9,5 +9,8 @@ $content-width: $page-width - ( $sidebar-width + $bitween-sidebar-content-margin
 //======================================================================
 // media query
 //======================================================================
-$mq-pc: 1100px; // $page-widthよりも小さくならないように気をつけましょう
-$mq-tb: 768px; // iPadに合わせて設定
+$bp-pc: 1100px; // $page-widthよりも小さくならないように気をつけましょう
+$bp-tb: 768px; // iPadに合わせて設定
+
+$mq-tb-max: $bp-pc - 1;
+$mq-sm-max: $bp-tb - 1;

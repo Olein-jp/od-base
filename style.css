@@ -189,36 +189,36 @@ img {
   line-height: 1;
 }
 
-ul.gnavi {
+.gnavi ul {
   text-align: center;
   padding: 0;
 }
 
-ul.gnavi li {
+.gnavi li {
   display: inline-block;
   font-size: 14px;
 }
 
-ul.gnavi li a {
+.gnavi li a {
   display: block;
   color: #333333;
   padding: 15px;
   text-decoration: none;
 }
 
-ul.gnavi li a:visited {
+.gnavi li a:visited {
   color: #0d0d0d;
 }
 
-ul.gnavi li a:hover, ul.gnavi li a:focus, ul.gnavi li a:active {
+.gnavi li a:hover, .gnavi li a:focus, .gnavi li a:active {
   color: #595959;
 }
 
-ul.gnavi li a:focus {
+.gnavi li a:focus {
   outline: thin dotted;
 }
 
-ul.gnavi li a:hover, ul.gnavi li a:active {
+.gnavi li a:hover, .gnavi li a:active {
   outline: 0;
 }
 
@@ -242,42 +242,12 @@ ul.gnavi li a:hover, ul.gnavi li a:active {
   display: flex;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .site-content {
-    width: 100%;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .site-content {
-    width: 100%;
-    display: block;
-  }
-}
-
 /*--------------------------------------------------------------
 # content area
 --------------------------------------------------------------*/
 .content-area {
   width: 694px;
   margin-right: 30px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .content-area {
-    width: 100%;
-    padding: 0 3%;
-    margin-bottom: 5em;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .content-area {
-    width: 100%;
-    padding: 0 3%;
-    margin-bottom: 3em;
-  }
 }
 
 .sticky {
@@ -549,20 +519,6 @@ ul.gnavi li a:hover, ul.gnavi li a:active {
   width: 336px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .sidebar {
-    width: 100%;
-    padding: 0 3%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sidebar {
-    width: 100%;
-    padding: 0 3%;
-  }
-}
-
 .widget {
   margin: 0 0 2em;
 }
@@ -581,22 +537,9 @@ ul.gnavi li a:hover, ul.gnavi li a:active {
   line-height: 2;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .widget ul li {
-    display: inline-block;
-  }
-}
-
 .widget ul li ul {
   padding-left: 1em;
   margin-bottom: .5em;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .widget ul li ul {
-    display: inline-block;
-    margin-bottom: 0;
-  }
 }
 
 .widget select {
@@ -661,12 +604,6 @@ ul.gnavi li a:hover, ul.gnavi li a:active {
 /* RSSウィジェット */
 .widget_rss ul li {
   margin-bottom: .5em;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .widget_rss ul li {
-    display: block;
-  }
 }
 
 .widget_rss ul li .rss-date {
@@ -894,12 +831,6 @@ ul.gnavi li a:hover, ul.gnavi li a:active {
 .site-footer .copyright {
   background: #333333;
   padding: 8px 0;
-}
-
-@media screen and (max-width: 767px) {
-  .site-footer .copyright {
-    padding: 8px 3%;
-  }
 }
 
 .site-footer .copyright p {
@@ -1324,4 +1255,61 @@ ul.gnavi li a:hover, ul.gnavi li a:active {
   background: #f4f4f4;
   padding: 30px;
   border: 1px solid #eee;
+}
+
+/*--------------------------------------------------------------
+# for Tablet
+--------------------------------------------------------------*/
+@media (max-width: 1099px) {
+  /*--------------------------------------------------------------
+# site content
+--------------------------------------------------------------*/
+  .site-content {
+    width: 100%;
+    display: block;
+  }
+  /*--------------------------------------------------------------
+# content area
+--------------------------------------------------------------*/
+  .content-area {
+    width: 100%;
+    padding: 0 3%;
+    margin-bottom: 5em;
+  }
+  /*--------------------------------------------------------------
+# sidebar
+--------------------------------------------------------------*/
+  .sidebar {
+    width: 100%;
+    padding: 0 3%;
+  }
+  .widget ul li {
+    display: inline-block;
+  }
+  .widget ul li ul {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  /* RSSウィジェット */
+  .widget_rss ul li {
+    display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+# for smartphone
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+  /*--------------------------------------------------------------
+# content area 
+--------------------------------------------------------------*/
+  .content-area {
+    margin-bottom: 3em;
+  }
+  /*--------------------------------------------------------------
+# site footer
+--------------------------------------------------------------*/
+  .site-footer .copyright {
+    padding: 8px 3%;
+  }
 }

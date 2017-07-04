@@ -64,9 +64,11 @@ Tags:
 	line-height: 1;
 }
 
-ul.gnavi {
-	text-align: center;
-	padding: 0;
+.gnavi {
+	ul {
+		text-align: center;
+		padding: 0;
+	}
 	li {
 		display: inline-block;
 		font-size: 14px;
@@ -97,14 +99,6 @@ ul.gnavi {
 	// サイドバーを左にしたい場合には下のコードをコメントアウト
 	// flex-direction: row-reverse;	
 	// .content-areaのマージンを右から左に変更 line.127
-	@media screen and ( min-width:$mq-tb ) and ( max-width:$mq-pc){
-		width: 100%;
-		display: block;
-	}
-	@media screen and ( max-width:$mq-tb - 1px ) {
-		width: 100%;
-		display: block;
-	}
 }
 
 /*--------------------------------------------------------------
@@ -113,16 +107,6 @@ ul.gnavi {
 .content-area {
 	width: $content-width;
 	margin-right: $bitween-sidebar-content-margin;
-	@media screen and ( min-width:$mq-tb ) and ( max-width:$mq-pc){
-		width: 100%;
-		padding: 0 3%;
-		margin-bottom: 5em;
-	}
-	@media screen and ( max-width:$mq-tb - 1px ){
-		width: 100%;
-		padding: 0 3%;
-		margin-bottom: 3em;
-	}
 }
 
 .sticky {
@@ -216,14 +200,6 @@ ul.gnavi {
 --------------------------------------------------------------*/
 .sidebar {
 	width: $sidebar-width;
-	@media screen and ( min-width:$mq-tb ) and ( max-width:$mq-pc){
-		width: 100%;
-		padding: 0 3%;
-	}
-	@media screen and ( max-width:$mq-tb - 1px ) {
-		width: 100%;
-		padding: 0 3%;
-	}
 }
 
 .widget {
@@ -237,16 +213,9 @@ ul.gnavi {
 		font-size: 14px;
 		li {
 			line-height: 2;
-			@media screen and ( min-width:$mq-tb ) and ( max-width:$mq-pc){
-				display: inline-block;
-			}
 			ul {
 				padding-left: 1em;
 				margin-bottom: .5em;
-				@media screen and ( min-width:$mq-tb ) and ( max-width:$mq-pc){
-					display: inline-block;
-					margin-bottom: 0;
-				}
 			}
 		}
 	}
@@ -330,9 +299,6 @@ ul.gnavi {
 	ul {
 		li {
 			margin-bottom: .5em;
-			@media screen and ( min-width:$mq-tb ) and ( max-width:$mq-pc){
-				display: block;
-			}
 			.rsswidget {
 				
 			}
@@ -407,9 +373,6 @@ ul.gnavi {
 	.copyright {
 		background: $text-color;
 		padding: 8px 0;
-		@media screen and ( max-width:$mq-tb - 1px ){
-			padding: 8px 3%;
-		}
 		p {
 			text-align: center;
 			font-size: 12px;
@@ -525,4 +488,18 @@ ul.gnavi {
 	background: #f4f4f4;
 	padding: 30px;
 	border: 1px solid #eee;
+}
+
+/*--------------------------------------------------------------
+# for Tablet
+--------------------------------------------------------------*/
+@media (max-width:$mq-tb-max) {
+	@import "_tb";
+}
+
+/*--------------------------------------------------------------
+# for smartphone
+--------------------------------------------------------------*/
+@media (max-width:$mq-sm-max) {
+	@import "_sm";
 }
