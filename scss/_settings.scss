@@ -1,16 +1,51 @@
 //======================================================================
-// Layout
+// Breakpoint
 //======================================================================
-$page-width: 1060px;
+$breakpoint-up: (
+	'sp': 'screen and (min-width: 768px)',
+	'tb': 'screen and (min-width: 940px)',
+	'md': 'screen and (min-width: 1100px)',
+	'lg': 'screen and (min-width: 1300px)',
+) !default;
+
+$breakpoint-down: (
+	'sp': 'screen and (max-width: 767px)',
+	'tb': 'screen and (max-width: 939px)',
+	'md': 'screen and (max-width: 1099px)',
+	'lg': 'screen and (max-width: 1299px)',
+) !default;
+
+//
+// It's means sign below
+// -------------------------
+// sp : smartphone
+// tb : tablet
+// md : medium
+// lg : large
+// -------------------------
+//
+
+
+@mixin mq-up($breakpoint: xl) {
+	@media #{map-get($breakpoint-up, $breakpoint)}{
+		@content;
+	}
+}
+
+@mixin mq-down($breakpoint: xl) {
+	@media #{map-get($breakpoint-down, $breakpoint)}{
+		@content;
+	}
+}
+
+//======================================================================
+// Sizes (part of layout)
+//======================================================================
+$lg-page-width: 1060px;
+$md-page-width: 920px;
+$tb-page-width: 720px;
+
 $sidebar-width: 336px;
-$bitween-sidebar-content-margin: 30px;
-$content-width: $page-width - ( $sidebar-width + $bitween-sidebar-content-margin );
+$margin: 30px;
 
-//======================================================================
-// media query
-//======================================================================
-$bp-pc: 1100px; // $page-widthよりも小さくならないように気をつけましょう
-$bp-tb: 768px; // iPadに合わせて設定
-
-$mq-tb-max: $bp-pc - 1;
-$mq-sm-max: $bp-tb - 1;
+$large-content-width: $lg-page-width - ( $sidebar-width + $margin );

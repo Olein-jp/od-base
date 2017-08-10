@@ -92,7 +92,7 @@ Tags:
 # site content
 --------------------------------------------------------------*/
 .site-content {
-	width: $page-width;
+	width: $lg-page-width;
 	margin: 0 auto;
 	padding: 30px 0;
 	display: flex;
@@ -105,8 +105,8 @@ Tags:
 # content area
 --------------------------------------------------------------*/
 .content-area {
-	width: $content-width;
-	margin-right: $bitween-sidebar-content-margin;
+	width: $large-content-width;
+	margin-right: $margin;
 }
 
 .sticky {
@@ -367,7 +367,7 @@ Tags:
 --------------------------------------------------------------*/
 .site-footer {
 	&__inner {
-		width: $page-width;
+		width: $lg-page-width;
 		margin: 0 auto;
 	}
 	.copyright {
@@ -488,18 +488,4 @@ Tags:
 	background: #f4f4f4;
 	padding: 30px;
 	border: 1px solid #eee;
-}
-
-/*--------------------------------------------------------------
-# for Tablet
---------------------------------------------------------------*/
-@media (max-width:$mq-tb-max) {
-	@import "_tb";
-}
-
-/*--------------------------------------------------------------
-# for smartphone
---------------------------------------------------------------*/
-@media (max-width:$mq-sm-max) {
-	@import "_sm";
 }
